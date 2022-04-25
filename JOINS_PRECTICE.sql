@@ -2,6 +2,7 @@ select * INTO EmployeeDetail1 FROM EmployeeDetail
 select * INTO ProjectDetail1 FROM ProjectDetail
 select * FROM ProjectDetail1
 select * FROM EmployeeDetail1
+use MK
 ----------------------JOINS QUESTION PRECTICE-----------------------------------
 ---------------------Q.1----------------------------------------------
  SELECT FirstName,ProjectName FROM EmployeeDetail A inner JOIN
@@ -28,4 +29,35 @@ select * FROM EmployeeDetail1
  --------------------Q.4-----------------------------
 SELECT FirstName,LastName,Salary,JoinDate,Gender,Department,ProjectName FROM EmployeeDetail A inner JOIN
  ProjectDetail B ON A.id = B.EmployeeDetailID  ; 
---------------------Q.5---------------------------    
+--------------------SQL Query- Part-1 (1).pdf---------------------------  
+ Q. Write a Query to display the employee details whose salary is less than40000
+select Salary from EmployeeDetail1 where Salary < 40000;
+
+Q. Write a Query to display the employee details whose salary is greater than or equal to
+40000 and less than 50000
+select Salary from EmployeeDetail1 where Salary<50000 and Salary>=40000
+
+Q. Write a Query to display the employee details whose salary is  between 40000 and 50000
+select Salary from EmployeeDetail1 where Salary between 40000  and 50000;
+select Salary from EmployeeDetail1 where Salary between 60000 and 60000;
+
+Q.  Write a Query to display the employee details whose name starts with ‘k’
+select * from EmployeeDetail1 where Firstname like  'k%';
+
+Q. Write a Query to display the employee details whose name ends with ‘t’
+select FirstName from EmployeeDetail1 where Firstname like  '%t';
+
+Q. Write a Query to display the employee details whose name contains the letter ‘ta’
+select FirstName from EmployeeDetail1 where Firstname like  '%ta%';
+
+Q. Write a Query to display the employee details whose names contains only four letters
+select FirstName from EmployeeDetail1 where Firstname like  '____';
+
+Q. Write a Query to display the employee details whose names contain ‘a’ and salary greater
+than 40000
+select * from EmployeeDetail1 where FirstName like '%a%' and Salary>40000
+
+Q. Write a Query to display the employee details whose salary is greater than Ajay
+select salary  from EmployeeDetail1 where FirstName='ajay' 
+select * from EmployeeDetail1 where Salary>50000;
+
